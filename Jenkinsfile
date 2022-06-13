@@ -28,6 +28,6 @@
                 sh 'git push --tags'
         }
        }
-    }
+     }
     }
 }
