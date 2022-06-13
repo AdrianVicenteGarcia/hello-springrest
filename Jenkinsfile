@@ -21,5 +21,10 @@
                 }
             }
         }
+        stage('Publish') {
+            sshagent(['github-ssh']){
+                sh 'git tag BUILD-1.0.${BUILD.NUMBER}'
+                sh 'git push --tags'
+        }}
     }
 }
